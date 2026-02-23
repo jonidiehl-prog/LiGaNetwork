@@ -7,53 +7,34 @@
     <style>
         :root { --primary: #0a192f; --accent: #007bff; --success: #25d366; --text: #333; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: var(--text); background-color: #f8f9fa; line-height: 1.6; }
-        
-        /* Navegación */
-        nav { background: var(--primary); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; sticky: top; }
+        nav { background: var(--primary); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
         .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 1px; }
         .logo span { color: var(--accent); }
-
-        /* Hero Section */
         header { background: linear-gradient(rgba(10,25,47,0.8), rgba(10,25,47,0.8)), url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1350&q=80'); 
                  background-size: cover; color: white; padding: 80px 20px; text-align: center; }
-        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-
-        /* Contenedor de Planes */
         .container { display: flex; justify-content: center; gap: 25px; padding: 50px 10%; flex-wrap: wrap; }
         .card { background: white; border-radius: 15px; padding: 30px; width: 280px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
-                 transition: transform 0.3s ease; border: 1px solid #eee; position: relative; overflow: hidden; }
+                 transition: transform 0.3s ease; border: 1px solid #eee; position: relative; overflow: hidden; text-align: center; }
         .card:hover { transform: translateY(-10px); border-color: var(--accent); }
-        
-        .card h2 { color: var(--primary); font-size: 1.2rem; text-transform: uppercase; }
         .megas { font-size: 3rem; font-weight: bold; color: var(--accent); margin: 15px 0; }
         .price { font-size: 1.8rem; font-weight: bold; margin-bottom: 20px; }
-        .price span { font-size: 1rem; color: #777; }
-
-        /* Botón WhatsApp */
-        .btn-ws { display: block; background: var(--success); color: white; padding: 12px; text-decoration: none; 
-                   border-radius: 8px; font-weight: bold; transition: background 0.3s; }
-        .btn-ws:hover { background: #128c7e; }
-
-        /* Etiqueta Popular */
-        .popular-tag { background: var(--accent); color: white; position: absolute; top: 15px; right: -30px; 
-                       transform: rotate(45deg); width: 120px; font-size: 0.8rem; font-weight: bold; }
-
-        .features { text-align: left; margin: 20px 0; padding: 0; list-style: none; }
+        .btn-ws { display: block; background: var(--success); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: bold; }
+        .popular-tag { background: var(--accent); color: white; position: absolute; top: 15px; right: -30px; transform: rotate(45deg); width: 120px; font-size: 0.8rem; font-weight: bold; }
+        .features { text-align: left; margin: 20px 0; padding: 0; list-style: none; font-size: 0.9rem; }
         .features li::before { content: "✓ "; color: var(--success); font-weight: bold; }
-
-        footer { background: var(--primary); color: white; padding: 20px; margin-top: 40px; }
+        footer { background: var(--primary); color: white; padding: 20px; text-align: center; }
     </style>
 </head>
 <body>
 
 <nav>
     <div class="logo">LiGa<span>Network</span></div>
-    <div>Soporte Local 24/7</div>
+    <div>Internet por Fibra Óptica</div>
 </nav>
 
 <header>
     <h1>Conectividad Real para tu Hogar</h1>
-    <p>Internet por Fibra Óptica: Estable, Rápido y Económico.</p>
+    <p>Navega a la velocidad de la luz con LiGaNetwork</p>
 </header>
 
 <div class="container">
@@ -62,24 +43,24 @@
         <div class="megas">10 MB</div>
         <div class="price">$350 <span>/ mes</span></div>
         <ul class="features">
-            <li>Fibra Óptica 100%</li>
+            <li>Fibra Óptica 100% Simétrica</li>
             <li>Navegación Estable</li>
             <li>Ideal para Redes Sociales</li>
         </ul>
-        <a href="https://wa.me/9621371495" class="btn-ws">¡Lo quiero!</a>
+        <a href="https://wa.me/529621371495?text=Hola%20LiGaNetwork!%20Me%20interesa%20el%20Plan%20de%2010MB" class="btn-ws">¡Lo quiero!</a>
     </div>
 
     <div class="card" style="border: 2px solid var(--accent);">
-        <div class="popular-tag">RECOMENDADO</div>
+        <div class="popular-tag">MÁS VENDIDO</div>
         <h2>Plan Familiar</h2>
         <div class="megas">15 MB</div>
         <div class="price">$450 <span>/ mes</span></div>
         <ul class="features">
-            <li>Streaming en HD</li>
-            <li>Home Office / Clases</li>
+            <li>Streaming en HD (Netflix/YouTube)</li>
+            <li>Home Office y Clases Online</li>
             <li>Mínima Latencia</li>
         </ul>
-        <a href="https://wa.me/9621371495" class="btn-ws">¡Lo quiero!</a>
+        <a href="https://wa.me/529621371495?text=Hola%20LiGaNetwork!%20Me%20interesa%20el%20Plan%20de%2015MB" class="btn-ws">¡Lo quiero!</a>
     </div>
 
     <div class="card">
@@ -87,11 +68,11 @@
         <div class="megas">20 MB</div>
         <div class="price">$550 <span>/ mes</span></div>
         <ul class="features">
-            <li>Videojuegos Online</li>
-            <li>Varios Disp. a la vez</li>
-            <li>Velocidad Máxima</li>
+            <li>Videojuegos Online (Ping bajo)</li>
+            <li>Varios Dispositivos a la vez</li>
+            <li>Velocidad Máxima Garantizada</li>
         </ul>
-        <a href="https://wa.me/9621371495" class="btn-ws">¡Lo quiero!</a>
+        <a href="https://wa.me/529621371495?text=Hola%20LiGaNetwork!%20Me%20interesa%20el%20Plan%20de%2020MB" class="btn-ws">¡Lo quiero!</a>
     </div>
 </div>
 
